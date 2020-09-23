@@ -12,15 +12,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="539.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nzhinusoft.test.controllers.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="616.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nzhinusoft.test.controllers.MainController">
    <children>
       <GridPane fx:id="pelouse" gridLinesVisible="true" layoutX="24.0" layoutY="55.0" prefHeight="290.0" prefWidth="342.0" AnchorPane.bottomAnchor="55.0" AnchorPane.topAnchor="55.0">
          <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
          </rowConstraints>
       </GridPane>
-      <Button fx:id="add" layoutX="407.0" layoutY="262.0" mnemonicParsing="false" onAction="#addTondeuse" text="Ajouter Tondeuse" />
-      <Button fx:id="doG" layoutX="394.0" layoutY="141.0" mnemonicParsing="false" onAction="#doG" text="G">
+      <Button fx:id="add" layoutX="485.0" layoutY="214.0" mnemonicParsing="false" onAction="#addTondeuse" text="Ajouter Tondeuse" />
+      <Button fx:id="doG" layoutX="472.0" layoutY="114.0" mnemonicParsing="false" onAction="#doG" text="G">
          <graphic>
             <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -29,7 +29,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="doD" contentDisplay="RIGHT" layoutX="470.0" layoutY="142.0" mnemonicParsing="false" onAction="#doD" text="D">
+      <Button fx:id="doD" contentDisplay="RIGHT" layoutX="548.0" layoutY="115.0" mnemonicParsing="false" onAction="#doD" text="D">
          <graphic>
             <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -38,7 +38,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="doA" layoutX="433.0" layoutY="192.0" mnemonicParsing="false" onAction="#doA" text="A">
+      <Button fx:id="doA" layoutX="511.0" layoutY="165.0" mnemonicParsing="false" onAction="#doA" text="A">
          <graphic>
             <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -47,22 +47,25 @@
             </ImageView>
          </graphic>
       </Button>
-      <Pane fx:id="addPane" layoutX="334.0" layoutY="277.0">
+      <Label fx:id="output" alignment="CENTER" layoutX="87.0" layoutY="369.0" prefHeight="17.0" prefWidth="312.0" style="-fx-background-color: #dedede; -fx-background-radius: 2em;" text="Resultat" />
+      <Pane fx:id="addPane" layoutX="412.0" layoutY="229.0">
          <children>
-            <Pane layoutY="30.0" prefHeight="83.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 0.8em;">
+            <Pane layoutX="114.0" layoutY="19.0" prefHeight="27.0" prefWidth="27.0" rotate="45.0" style="-fx-background-color: white;" />
+            <Pane layoutX="-15.0" layoutY="30.0" prefHeight="113.0" prefWidth="215.0" style="-fx-background-color: white; -fx-background-radius: 0.8em;">
                <children>
-                  <TextField layoutX="26.0" layoutY="17.0" prefHeight="25.0" prefWidth="66.0" promptText="x0" fx:id="x0" />
-                  <TextField fx:id="y0" layoutX="104.0" layoutY="17.0" prefHeight="25.0" prefWidth="66.0" promptText="y0" />
-                  <ComboBox fx:id="direction" layoutX="26.0" layoutY="52.0" prefHeight="25.0" prefWidth="96.0" promptText="Direction" />
-                  <Button fx:id="ok" layoutX="143.0" layoutY="52.0" mnemonicParsing="false" onAction="#initTondeuse" text="Ok" />
+                  <TextField layoutX="14.0" layoutY="15.0" prefHeight="25.0" prefWidth="45.0" promptText="x0" fx:id="x0" />
+                  <TextField fx:id="y0" layoutX="62.0" layoutY="15.0" prefHeight="25.0" prefWidth="45.0" promptText="y0" />
+                  <Button fx:id="ok" layoutX="169.0" layoutY="84.0" mnemonicParsing="false" onAction="#initTondeuse" text="Ok" />
+                  <TextField fx:id="operations" layoutX="23.0" layoutY="54.0" prefHeight="25.0" prefWidth="172.0" promptText="Operations à faire" />
+                  <ComboBox fx:id="direction" layoutX="113.0" layoutY="15.0" prefHeight="25.0" prefWidth="92.0" promptText="Direction" />
                </children>
             </Pane>
-            <Pane layoutX="114.0" layoutY="19.0" prefHeight="27.0" prefWidth="27.0" rotate="45.0" style="-fx-background-color: white;" />
          </children>
          <effect>
             <DropShadow />
          </effect>
       </Pane>
-      <Label fx:id="output" alignment="CENTER" layoutX="104.0" layoutY="369.0" prefHeight="17.0" prefWidth="215.0" text="Label" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="168.0" layoutY="16.0" prefHeight="17.0" prefWidth="226.0" style="-fx-background-color: #dedede; -fx-background-radius: 2em;" text="Test-NzhinuSoft" />
+      <Label layoutX="260.0" layoutY="393.0" text="Clquez sur une tondeuse pour retrouver et/ou modifier sa position" />
    </children>
 </AnchorPane>

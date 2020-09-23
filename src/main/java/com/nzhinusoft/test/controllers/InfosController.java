@@ -19,7 +19,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
 /**
- * FXML Controller class
+ * recupere les coordonnees du coin superieur de la pelouse
  *
  * @author Isaac
  */
@@ -53,6 +53,8 @@ public class InfosController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/main.fxml"));
         Pane root = (Pane) fxmlLoader.load();
         App.getStage().setScene(new Scene(root));
+        App.getStage().setTitle("");
+        App.getStage().setResizable(false);
     }
 
 }

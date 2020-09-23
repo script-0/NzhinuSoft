@@ -4,12 +4,11 @@ import com.nzhinusoft.test.App;
 import com.nzhinusoft.test.models.Direction;
 import com.nzhinusoft.test.models.Operations;
 import com.nzhinusoft.test.models.Tondeuse;
-import javafx.scene.Cursor;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 
 /**
- *
+ *Gere le deplacement des tondeuses sur la pelouse
  * @author Isaac
  */
 public class TondeuseController {
@@ -24,8 +23,8 @@ public class TondeuseController {
         this.main = main;
         box = (HBox) (HBox) App.getNodeFromGridPane(main.pelouse, x, y);
         img = new ImageView(App.class.getResource("images/chevron.png").toExternalForm());
-        img.setFitHeight(30);
-        img.setFitWidth(30);
+        img.setFitHeight(20);
+        img.setFitWidth(20);
         img.getStyleClass().add("direction");
         img.setOnMouseClicked((e) -> {
             main.controller = this;

@@ -6,7 +6,7 @@
 package com.nzhinusoft.test.models;
 
 /**
- *
+ * Representation des differentes directions
  * @author Isaac
  */
 public enum Direction {

@@ -9,7 +9,7 @@ import com.nzhinusoft.test.App;
 import java.util.ArrayList;
 
 /**
- *
+ * Representation d'une tondeuse. Implemente la logique metier du probleme
  * @author Isaac
  */
 public class Tondeuse {

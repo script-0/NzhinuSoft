@@ -3,7 +3,6 @@ package com.nzhinusoft.test;
 import com.nzhinusoft.test.controllers.InfosController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -13,7 +12,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
 /**
- * JavaFX App
+ * Main App
  */
 public class App extends Application {
 
@@ -27,9 +26,10 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/infos.fxml"));
         Pane root = (Pane) fxmlLoader.load();
         InfosController controller = fxmlLoader.getController();        
-        controller.setLabel("Entrer les coordonnees du coin superieur droit de la pelouse");
+        controller.setLabel("Entrer les coordonnees du coin superieur droit");
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Creation de la pelouse");
         stage.show();
         App.stage = stage;
     }

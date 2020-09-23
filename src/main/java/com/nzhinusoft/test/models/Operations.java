@@ -6,7 +6,7 @@
 package com.nzhinusoft.test.models;
 
 /**
- *
+ *Representation des differentes operations
  * @author Isaac
  */
 public enum Operations {D,G,A}
