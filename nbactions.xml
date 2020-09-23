@@ -10,4 +10,4 @@
                 <goal>javafx:run</goal>
             </goals>
         </action>
-    </actions>
+</actions>

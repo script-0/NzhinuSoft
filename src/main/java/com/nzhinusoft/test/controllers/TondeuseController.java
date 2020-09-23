@@ -44,7 +44,7 @@ public class TondeuseController {
     }
 
     public String getPosition() {
-        return "[x=" + tondeuse.getX() + ", y=" + tondeuse.getY() + " ] ";
+        return "[x=" + tondeuse.getX() + ", y=" + tondeuse.getY() + " pos="+ tondeuse.getDirection()+"] ";
     }
 
     public void doD() {

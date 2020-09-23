@@ -145,7 +145,7 @@ public class MainController implements Initializable {
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
-                        doG();
+                        Platform.runLater(()->{doG();});
                         this.cancel();
                     }
                 }, 1000 * i++);
@@ -154,7 +154,7 @@ public class MainController implements Initializable {
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
-                        doD();
+                        Platform.runLater(()->{doD();});
                         this.cancel();
                     }
                 }, 1000 * i++);
