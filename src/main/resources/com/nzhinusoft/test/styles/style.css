@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 22, 2020, 11:13:25 PM
+    Author     : Isaac
+*/
+
+
+.controls:hover{
+    -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5);
+}
+.case{
+    -fx-background-color:#3AB42F;
+    -fx-border-color:darkcyan;
+}
+
+.caseColored{
+    -fx-background-color: darkgray;
+    -fx-border-color:#3AB42F;
+}
+
+.direction:hover{
+    -fx-cursor:hand;
+}
