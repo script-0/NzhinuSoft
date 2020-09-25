@@ -6,5 +6,4 @@ module com.nzhinusoft.test {
     opens com.nzhinusoft.test to javafx.fxml;
     opens com.nzhinusoft.test.controllers to javafx.fxml;
     exports com.nzhinusoft.test;
-    exports com.nzhinusoft.test.controllers;
 }

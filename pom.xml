@@ -37,6 +37,10 @@
                 <version>0.0.4</version>
                 <configuration>
                     <mainClass>com.nzhinusoft.test.App</mainClass>
+                    <compress>2</compress>
+                    <noHeaderFiles>true</noHeaderFiles>
+                    <launcher>Test</launcher>
+                    <jlinkImageName>Test</jlinkImageName>
                 </configuration>
             </plugin>
         </plugins>
