@@ -60,9 +60,8 @@ public class TondeuseController {
     }
 
     public void doA() {
-        System.out.println("Doing A");
-        tondeuse.updatePosition(Operations.A);
         int xtmp = tondeuse.getX(), ytmp = tondeuse.getY();
+        tondeuse.updatePosition(Operations.A);
         HBox boxTmp = (HBox) App.getNodeFromGridPane(main.pelouse, tondeuse.getX(), tondeuse.getY());
         if (boxTmp.getChildren().isEmpty()) {
             box.getChildren().remove(img);

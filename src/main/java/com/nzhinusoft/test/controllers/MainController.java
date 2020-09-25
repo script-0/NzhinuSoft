@@ -64,8 +64,6 @@ public class MainController implements Initializable {
 
     TondeuseController controller;
 
-    ArrayList<TondeuseController> tondeuses = new ArrayList<>();
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         pelouse.setMaxHeight(Double.POSITIVE_INFINITY);
@@ -108,7 +106,7 @@ public class MainController implements Initializable {
         try {
             x = Integer.valueOf(x0.getText());
             y = Integer.valueOf(y0.getText());
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             output.setText("Coordonées non valides");
             return;
         }
@@ -121,10 +119,13 @@ public class MainController implements Initializable {
             return;
         }
         HBox box = (HBox) App.getNodeFromGridPane(pelouse, x, y);
-        this.controller = new TondeuseController(x, y, direction.getValue(), this);
-        if (box.getChildren().isEmpty()) {
-            tondeuses.add(this.controller);
+        
+        if (!box.getChildren().isEmpty()) {//S'il existe une tondeuse a cet emplacement.
+            return;
         }
+        
+        TondeuseController control = new TondeuseController(x, y, direction.getValue(), this);
+        this.controller = control;
         addPane.setVisible(false);
 
         Timer timer;
@@ -136,7 +137,7 @@ public class MainController implements Initializable {
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
-                        Platform.runLater(()->{doA();});//Without Platform.runLater() , Not on FX application error
+                        Platform.runLater(()->{control.doA();});//Without Platform.runLater() , Not on FX application error
                         this.cancel();
                     }
                 }, 1000 * i++);
@@ -145,7 +146,7 @@ public class MainController implements Initializable {
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
-                        Platform.runLater(()->{doG();});
+                        Platform.runLater(()->{control.doG();});
                         this.cancel();
                     }
                 }, 1000 * i++);
@@ -154,7 +155,7 @@ public class MainController implements Initializable {
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
-                        Platform.runLater(()->{doD();});
+                        Platform.runLater(()->{control.doD();});
                         this.cancel();
                     }
                 }, 1000 * i++);
@@ -164,6 +165,7 @@ public class MainController implements Initializable {
         x0.setText("");
         y0.setText("");
         operations.setText("");
+        System.gc();
     }
 
     @FXML
