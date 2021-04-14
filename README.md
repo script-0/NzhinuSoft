@@ -1,2 +1,2 @@
-# com.NzhinuSoft.Test
+# NzhinuSoft Test
 
