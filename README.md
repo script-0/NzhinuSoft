@@ -4,7 +4,7 @@ Nous avons réalisé cette app dans le cadre de l'entretien technique pour un st
 
 Un challenge vraiment intéressant :smiley: , surtout que c'est notre premier projet en Java 11. Habitué à Java 8 , il fallait s'adapter à la logique de Java 11 , maven et tout ... sans oublier l'horloge qui tournait :hourglass_flowing_sand:
 ## Demo
-<img src="images/tondeuse.gif"/>
+[![](<img src="images/tondeuse.gif"/>)]((https://youtu.be/r9Z6pPvQcak) "Demo on youtube")
 
 
 ## To Do
