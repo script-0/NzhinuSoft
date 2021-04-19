@@ -4,8 +4,8 @@ Nous avons réalisé cette app dans le cadre de l'entretien technique pour un st
 
 Un challenge vraiment intéressant :smiley: , surtout que c'est notre premier projet en Java 11. Habitué à Java 8 , il fallait s'adapter à la logique de Java 11 , maven et tout ... sans oublier l'horloge qui tournait :hourglass_flowing_sand:
 ## Demo
-[![](<img src="images/tondeuse.gif"/>)]((https://youtu.be/r9Z6pPvQcak) "Demo on youtube")
-
+<img src="images/tondeuse.gif"/>
+You can see this demo on [youtube](https://youtu.be/r9Z6pPvQcak)
 
 ## To Do
 - [ ] Mettre à jour le [script]( deploy.iss ) de déploiement : utiliser les chemins relatifs
